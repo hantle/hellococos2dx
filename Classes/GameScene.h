@@ -45,7 +45,7 @@ public:
     void onTouchesMoved(const std::vector<cocos2d::Touch *> &touches, cocos2d::Event *unused_event);
     void onTouchesEnded(const std::vector<cocos2d::Touch *> &touches, cocos2d::Event *unused_event);
     
-    void onAcceleration(cocos2d::Acceleration *acc, cocos2d::Event *event);
+//    void onAcceleration(cocos2d::Acceleration *acc, cocos2d::Event *event);
     
     // implement the "static create()" method manually
     CREATE_FUNC(GameScene);

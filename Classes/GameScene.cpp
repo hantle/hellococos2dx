@@ -20,15 +20,6 @@ Scene* GameScene::createScene()
     // layer is autorelease
     auto layer = GameScene::create();
     
-    
-    auto bird = Sprite::create();
-    auto skyColor =  Color3B();
-    int verticalPipeGap = 150.0;
-    auto pipeTextureUp = Texture2D();
-    auto pipeTextureDown = Texture2D();
-    auto movePipesAndRemove = MoveBy::create(3, Point(3, 50));
-//    Action::autorelease();
-    
     // add layer to scene
     scene->addChild(layer);
     
@@ -167,30 +158,30 @@ bool GameScene::init() {
 //    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     // Menu
-    auto menuItem1 = MenuItemFont::create("Play", CC_CALLBACK_1(GameScene::Play, this));
-    auto menuItem2 = MenuItemFont::create("HighScore", CC_CALLBACK_1(GameScene::HighScores, this));
-    auto menuItem3 = MenuItemFont::create("Settings", CC_CALLBACK_1(GameScene::Settings, this));
-    auto menuItem4 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::ImageButton, this));
-//    
+//    auto menuItem1 = MenuItemFont::create("Play", CC_CALLBACK_1(GameScene::Play, this));
+//    auto menuItem2 = MenuItemFont::create("HighScore", CC_CALLBACK_1(GameScene::HighScores, this));
+//    auto menuItem3 = MenuItemFont::create("Settings", CC_CALLBACK_1(GameScene::Settings, this));
+//    auto menuItem4 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(GameScene::ImageButton, this));
+//
 //    menuItem1->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 5) * 4));
 //    menuItem2->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 5) * 3));
 //    menuItem3->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 5) * 2));
 //    menuItem4->setPosition(Point(visibleSize.width / 2, (visibleSize.height / 5) * 1));
 //    
-    auto menu = Menu::create(menuItem1, menuItem2, menuItem3, menuItem4, NULL);
-    menu->alignItemsVertically();
+//    auto menu = Menu::create(menuItem1, menuItem2, menuItem3, menuItem4, NULL);
+//    menu->alignItemsVertically();
 //    menu->setPosition(Point(0, 0));
-    this->addChild(menu);
+//    this->addChild(menu);
     
     
     // Scene
     // in Android Change Android.mk
     // add the new file
     
-    Device::setAccelerometerEnabled(true);
-    auto listener = EventListenerAcceleration::create(CC_CALLBACK_2(GameScene::onAcceleration, this));
-    
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+//    Device::setAccelerometerEnabled(true);
+//    auto listener = EventListenerAcceleration::create(CC_CALLBACK_2(GameScene::onAcceleration, this));
+//    
+//    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
 }
@@ -250,9 +241,9 @@ void GameScene::StopEffect(float dt) {
 }
 
 // accelerometer
-void onAcceleration(cocos2d::Acceleration *acc, cocos2d::Event *event) {
-    CCLOG("%f", acc->z);
-}
+//void onAcceleration(cocos2d::Acceleration *acc, cocos2d::Event *event) {
+//    CCLOG("%f", acc->z);
+//}
 
 void GameScene::menuCloseCallback(Ref *pSender) {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
